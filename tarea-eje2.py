@@ -1,4 +1,5 @@
 import pandas as pd
+import pathlib
 
 
 x0 = 1.4  # Semilla
@@ -67,4 +68,6 @@ acc = accuary(x_values)
 table = [x_values, fxn, fderiva, xn_nformt, acc]
 df = pd.DataFrame(table).T
 
-df.to_excel(excel_writer="C:/Users/Dioniso/Desktop/Newton_Raphson.xlsx")
+
+df.to_excel(excel_writer=((str(pathlib.Path().parent.absolute()
+                               ).replace("\\", "/")+"/Newton_Raphson.xlsx")))
