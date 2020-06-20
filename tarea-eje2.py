@@ -22,6 +22,7 @@ def xn(x):
 def fxn(xn):
     fxn_values = []
     for x in xn:
+        # Funcion Original
         y = (x**5-(3*x**4)+(3*x**3)-(3*x**2)-x+6)
         fxn_values.append(y)
 
@@ -31,6 +32,7 @@ def fxn(xn):
 def f_derivate(xn):
     f_derivate_values = []
     for x in xn:
+        # Funcion derivada
         y = ((5*x**4)-(12*x**3)+(9*x**2)-(6*x)-1)
         f_derivate_values.append(y)
 
@@ -41,8 +43,8 @@ def xn_noformat(x):
     values = []
     for i in range(25):
 
-        y = ((x**5-(3*x**4)+(3*x**3)-(3*x**2)-x+6) /
-             ((5*x**4)-(12*x**3)+(9*x**2)-(6*x)-1))
+        y = x-(((x**5-(3*x**4)+(3*x**3)-(3*x**2)-x+6) /
+                ((5*x**4)-(12*x**3)+(9*x**2)-(6*x)-1)))
 
         values.append(y)
         x = y
