@@ -61,13 +61,14 @@ def presicion(xn):
 
 
 x_values = xn(x0, n)
-fxn = funcion_normal(x_values[0])
-fderiva = funcion_derivada(x_values[0])
-xn_nformt = xn_mas_uno(x0, n)
-acc = presicion(x_values[0])
+fxn_normal_valores = funcion_normal(x_values[0])
+fderiva_valores = funcion_derivada(x_values[0])
+xn_n_mas_uno_valores = xn_mas_uno(x0, n)
+presiocion_valores = presicion(x_values[0])
 
 
-table = [x_values[1], fxn, fderiva, xn_nformt, acc]
+table = [x_values[1], fxn_normal_valores, fderiva_valores,
+         xn_n_mas_uno_valores, presiocion_valores]
 df = pd.DataFrame(table).T
 
 
